@@ -26,6 +26,7 @@ namespace Mod4AMF
 
             arraySum(numberArray);
             Console.WriteLine(largestVal(numberArray));
+            Console.WriteLine(smallestVal(numberArray));
 
             Console.ReadLine();
 
@@ -58,7 +59,15 @@ namespace Mod4AMF
 
         private static int smallestVal(int[] inputArray)
         {
-            return 0;
+            int smallVal = inputArray[0];
+
+            for (int i = 1; i < inputArray.Length; i++)
+            {
+                if (inputArray[i] < smallVal)
+                    smallVal = inputArray[i];
+            }
+
+            return smallVal;
         }
     }
 }
