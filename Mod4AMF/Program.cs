@@ -22,14 +22,16 @@ namespace Mod4AMF
             numberArray[6] = 15;
             numberArray[7] = 14;
             numberArray[8] = 96;
-            numberArray[9] = 82;
+            numberArray[9] = 107;
 
             arraySum(numberArray);
+            Console.WriteLine(largestVal(numberArray));
 
             Console.ReadLine();
 
         }
 
+        // PQ 1
         private static void arraySum(int[] inputArray)
         {
             int sum = 0;
@@ -39,6 +41,24 @@ namespace Mod4AMF
             }
             Console.WriteLine(sum);
 
+        }
+
+        // PQ 2
+        private static int largestVal(int[] inputArray)
+        {
+            int largeVal = inputArray[0];
+            for (int i = 1; i < inputArray.Length; i++)
+            {
+                if (inputArray[i] > largeVal)
+                    largeVal = inputArray[i];
+            }
+
+            return largeVal;
+        }
+
+        private static int smallestVal(int[] inputArray)
+        {
+            return 0;
         }
     }
 }
