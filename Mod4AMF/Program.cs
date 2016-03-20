@@ -13,21 +13,26 @@ namespace Mod4AMF
             // PQ 1
 
             int[] numberArray = new int[10];
-            numberArray[0] = 44;
-            numberArray[1] = 27;
-            numberArray[2] = 34;
-            numberArray[3] = 37;
-            numberArray[4] = 22;
-            numberArray[5] = 11;
-            numberArray[6] = 15;
-            numberArray[7] = 14;
-            numberArray[8] = 96;
-            numberArray[9] = 107;
+            numberArray[0] = 3;
+            numberArray[1] = 4;
+            numberArray[2] = 7;
+            numberArray[3] = 1;
+            numberArray[4] = 9;
+            numberArray[5] = 2;
+            numberArray[6] = 6;
+            numberArray[7] = 10;
+            numberArray[8] = 12;
+            numberArray[9] = 14;
 
             arraySum(numberArray);
             Console.WriteLine(largestVal(numberArray));
             Console.WriteLine(smallestVal(numberArray));
 
+            numberArray = squaredArray(numberArray);
+            foreach (int number in numberArray)
+            {
+                Console.WriteLine(number);
+            }
             Console.ReadLine();
 
         }
@@ -57,6 +62,7 @@ namespace Mod4AMF
             return largeVal;
         }
 
+        // PQ 3
         private static int smallestVal(int[] inputArray)
         {
             int smallVal = inputArray[0];
@@ -68,6 +74,18 @@ namespace Mod4AMF
             }
 
             return smallVal;
+        }
+
+        // PQ 4
+        private static int[] squaredArray(int[] inputArray)
+        {
+
+            for (int i = 0; i < inputArray.Length; i++)
+			{
+			    inputArray[i] = inputArray[i] * inputArray[i];
+			}
+
+            return inputArray;
         }
     }
 }
